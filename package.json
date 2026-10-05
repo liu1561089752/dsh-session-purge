@@ -1,0 +1,68 @@
+{
+  "name": "@local/dsh-session-purge",
+  "displayName": "Session Purge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Hard-delete a whole workspace: sessions, projection cache, registry row, attachments and the project folder.",
+  "license": "MIT",
+  "author": "liu1561089752",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liu1561089752/dsh-session-purge.git"
+  },
+  "homepage": "https://github.com/liu1561089752/dsh-session-purge#readme",
+  "bugs": {
+    "url": "https://github.com/liu1561089752/dsh-session-purge/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "bundle",
+    "workspace",
+    "session",
+    "purge",
+    "delete",
+    "cleanup",
+    "attachments"
+  ],
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node --test"
+  }
+}

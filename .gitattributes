@@ -1,0 +1,6 @@
+# Normalize every text file to LF in the repository so checkouts on any
+# platform produce a consistent diff.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zstd binary

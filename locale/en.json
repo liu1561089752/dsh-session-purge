@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Purge workspace",
+    "description": "Permanently delete a workspace together with its session logs, projection cache, related attachments and the project folder itself (with 13 safety guards)."
+  }
+}

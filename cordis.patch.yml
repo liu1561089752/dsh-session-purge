@@ -1,0 +1,11 @@
+# Session Purge — one installable row. The Host half owns every destructive
+# filesystem operation and serves its own JSON routes; the Web client half
+# (this package's `dsh.client` manifest) adds the sidebar button and the
+# confirmation dialog. The stock "Delete workspace" action is never touched.
+#
+# Per-profile overrides: repeat this row id in the profile patch and set the
+# `config` keys documented in README.md.
+- insert:
+    - id: session-purge
+      name: '@local/dsh-session-purge'
+      config: {}
